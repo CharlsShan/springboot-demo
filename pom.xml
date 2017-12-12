@@ -7,6 +7,8 @@
   <modules>
   	<module>springboot-mybits-druid</module>
   	<module>springboot-redis</module>
+  	<module>springboot-swagger</module>
+  	<module>springboot-filter</module>
   </modules>
   
   	<!-- 使用如下配置解决了spring-boot-starter-parent必须导入的问题 -->
