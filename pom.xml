@@ -7,7 +7,6 @@
   <modules>
   	<module>springboot-mybits-druid</module>
   	<module>springboot-redis</module>
-  	<module>springboot-swagger</module>
   	<module>springboot-filter</module>
   </modules>
   
