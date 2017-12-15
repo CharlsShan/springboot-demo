@@ -23,8 +23,9 @@ public class MyFilter implements Filter{
     }
 
     @Override
-    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain){
+    public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException{
     	System.out.println("filter run");
+    	filterChain.doFilter(servletRequest, servletResponse);
     }
 
     @Override
