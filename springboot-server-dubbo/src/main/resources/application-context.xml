@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+		
+	<dubbo:application name="springboot-dubbo" />
+	<!-- 使用zookeeper注册中心暴露服务地址 -->
+	<dubbo:registry address="172.22.22.230:2888" protocol="zookeeper"/>
+
+	<dubbo:protocol name="dubbo" port="20880" />
+	<dubbo:service interface="com.springboot.service.StudentService"
+		ref="studentServiceImp" timeout="1000000" version="1.0.0"/>
+	<bean id="studentServiceImp" class="com.springboot.service.imp.StudentServiceImp" />
+		
+</beans>
