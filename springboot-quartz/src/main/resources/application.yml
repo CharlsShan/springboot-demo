@@ -1,0 +1,6 @@
+server:
+  port: 8081
+  
+quartz: 
+  cloneExpression: '0 0 15 * * ? *'
+
