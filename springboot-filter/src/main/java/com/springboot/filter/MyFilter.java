@@ -9,6 +9,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletResponse;
 
 /**
 * @author shanchenyang
@@ -21,10 +22,15 @@ public class MyFilter implements Filter{
     public void init(FilterConfig arg0) throws ServletException {
 		System.out.println("filter init!");
     }
-
+	/**
+	 * 处理跨域问题
+	 */
     @Override
     public void doFilter(ServletRequest servletRequest, ServletResponse servletResponse, FilterChain filterChain) throws IOException, ServletException{
-    	System.out.println("filter run");
+        HttpServletResponse httpResponse = (HttpServletResponse) servletResponse;
+        httpResponse.setHeader("Access-Control-Allow-Origin", "*");
+        httpResponse.setHeader("Access-Control-Allow-Headers", "accept, content-type");
+        httpResponse.setHeader("Access-Control-Allow-Method", "POST,OPTIONS");
     	filterChain.doFilter(servletRequest, servletResponse);
     }
 
