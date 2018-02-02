@@ -11,6 +11,7 @@
   	<module>springboot-quartz</module>
   	<module>springboot-server-dubbo</module>
   	<module>springboot-client-dubbo</module>
+      <module>springboot-web</module>
   </modules>
   
   	<!-- 使用如下配置解决了spring-boot-starter-parent必须导入的问题 -->
