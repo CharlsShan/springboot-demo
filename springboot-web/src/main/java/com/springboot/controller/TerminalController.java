@@ -15,6 +15,8 @@ public class TerminalController {
     
 	@GetMapping("world")
     public String getHello() {
+		
+		int a = 10/0;
         return "hello world";
     }
 }
