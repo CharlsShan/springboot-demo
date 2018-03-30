@@ -1,7 +1,6 @@
 package com.springboot.domain;
 
 public class Result<T> {
-
     /** 错误码. */
     private Integer code;
 
@@ -10,7 +9,6 @@ public class Result<T> {
 
     /** 具体的内容. */
     private T data;
-
     public Result() {
     }
 

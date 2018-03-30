@@ -6,13 +6,9 @@ import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-
 import com.springboot.interceptor.BussinessInterceptor;
 import com.springboot.interceptor.TerminalInterceptor;
 
-/**
- * Created by shanchenyang on 2018/2/1.
- */
 @Configuration
 public class WebConfiguration extends WebMvcConfigurerAdapter {
 
@@ -58,6 +54,4 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
                 .allowedMethods("POST","GET","OPTIONS")
                 .allowedOrigins("*");
     }
-
-
 }
